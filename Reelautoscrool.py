@@ -34,7 +34,7 @@ def login():
         driver.get('https://www.instagram.com/accounts/login/')
 
         # Wait for the page to load
-        time.sleep(3)
+        time.sleep(5)
 
         # Find the username and password fields and enter your credentials
         username_input = driver.find_element(By.NAME, 'username')
@@ -53,12 +53,12 @@ def login():
         driver.get('https://www.instagram.com/reels/')
 
         # Wait for the Reels page to load
-        time.sleep(5)
+        time.sleep(7)
 
         # Scroll through the Reels
-        for _ in range(10):  # Adjust the range for more or fewer scrolls
+        for _ in range(1000):  # Adjust the range for more or fewer scrolls
             driver.find_element(By.TAG_NAME, 'body').send_keys(Keys.PAGE_DOWN)
-            time.sleep(2)  # Wait for the new content to load
+            time.sleep(13)  # Wait for the new content to load
 
     finally:
         # Close the browser after scrolling
